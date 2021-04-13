@@ -146,6 +146,10 @@
     <Compile Include="Migrations\202104131048120_create-database.designer.cs">
       <DependentUpon>202104131048120_create-database.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104131321068_create_database1.cs" />
+    <Compile Include="Migrations\202104131321068_create_database1.Designer.cs">
+      <DependentUpon>202104131321068_create_database1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\ChiTietDonHang.cs" />
@@ -645,6 +649,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202104131048120_create-database.resx">
       <DependentUpon>202104131048120_create-database.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104131321068_create_database1.resx">
+      <DependentUpon>202104131321068_create_database1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
