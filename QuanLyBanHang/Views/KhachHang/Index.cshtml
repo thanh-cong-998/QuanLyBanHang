@@ -1,0 +1,52 @@
+﻿@model IEnumerable<QuanLyBanHang.Models.KhachHang>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Danh sách khách hàng</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.HoVaTen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaHoaDon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DiaChi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SĐT)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.HoVaTen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaHoaDon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DiaChi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SĐT)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaKhachHang }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MaKhachHang }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaKhachHang })
+        </td>
+    </tr>
+}
+
+</table>

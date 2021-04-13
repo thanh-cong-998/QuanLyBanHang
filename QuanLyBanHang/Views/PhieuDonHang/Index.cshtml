@@ -1,0 +1,52 @@
+﻿@model IEnumerable<QuanLyBanHang.Models.PhieuDonHang>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Đơn mua hàng</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ThanhTien.MaHoaDon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NgayDatHang)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SĐT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DiaChi)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ThanhTien.MaHoaDon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayDatHang)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SĐT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DiaChi)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Ma_PDH }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Ma_PDH }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Ma_PDH })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,59 @@
+﻿@model QuanLyBanHang.Models.ChiTietDonHang
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ChiTietDonHang</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PhieuDonHang.ThanhTienID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhieuDonHang.ThanhTienID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenMatHang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenMatHang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoLuong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TongTien)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TongTien)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayMuaHang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayMuaHang)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CTDH_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
