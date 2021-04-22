@@ -13,10 +13,10 @@ namespace QuanLyBanHang.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class QuanLyBanHangEntities : DbContext
+    public partial class QuanLyBanHangEntities2 : DbContext
     {
-        public QuanLyBanHangEntities()
-            : base("name=QuanLyBanHangEntities")
+        public QuanLyBanHangEntities2()
+            : base("name=QuanLyBanHangEntities2")
         {
         }
     
@@ -24,5 +24,7 @@ namespace QuanLyBanHang.Models
         {
             throw new UnintentionalCodeFirstException();
         }
+    
+        public virtual DbSet<TinTucs> TinTucs { get; set; }
     }
 }

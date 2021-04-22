@@ -36,5 +36,9 @@ namespace QuanLyBanHang.Models
         }
 
         public System.Data.Entity.DbSet<QuanLyBanHang.Models.Account> Accounts { get; set; }
+
+        public System.Data.Entity.DbSet<QuanLyBanHang.Models.RoLe> RoLes { get; set; }
+
+        public System.Data.Entity.DbSet<QuanLyBanHang.Models.demo> demoes { get; set; }
     }
 }

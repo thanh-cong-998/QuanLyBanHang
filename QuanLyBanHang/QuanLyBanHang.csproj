@@ -48,6 +48,9 @@
     <Reference Include="Autofac, Version=5.2.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <HintPath>..\packages\Autofac.5.2.0\lib\net461\Autofac.dll</HintPath>
     </Reference>
+    <Reference Include="CKSource.CKFinder.Connector.Config, Version=3.5.1.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CKSource.CKFinder.Connector.Config.3.5.1.2\lib\net461\CKSource.CKFinder.Connector.Config.dll</HintPath>
+    </Reference>
     <Reference Include="CKSource.CKFinder.Connector.Core, Version=3.5.1.2, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\CKSource.CKFinder.Connector.Core.3.5.1.2\lib\net461\CKSource.CKFinder.Connector.Core.dll</HintPath>
     </Reference>
@@ -165,6 +168,7 @@
     <Compile Include="Controllers\MatHangController.cs" />
     <Compile Include="Controllers\NhanVienController.cs" />
     <Compile Include="Controllers\PhieuDonHangController.cs" />
+    <Compile Include="Controllers\RoLeController.cs" />
     <Compile Include="Controllers\ThanhTienController.cs" />
     <Compile Include="Controllers\TinTucController.cs" />
     <Compile Include="Global.asax.cs">
@@ -196,6 +200,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Ckeditor.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\ckfinder.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ckfinder.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ckfinder.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ckfinder.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ckfinder.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ckfinder.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Models\HoaDon.cs" />
     <Compile Include="Models\KhachHang.cs" />
     <Compile Include="Models\KhoHang.cs" />
@@ -203,10 +222,11 @@
     <Compile Include="Models\NhanVien.cs" />
     <Compile Include="Models\PhieuDonHang.cs" />
     <Compile Include="Models\QuanLyBanHangdbContext.cs" />
+    <Compile Include="Models\RoLe.cs" />
     <Compile Include="Models\ThanhTien.cs" />
     <Compile Include="Models\TinTuc.cs" />
     <Compile Include="Models\TinTucs.cs">
-      <DependentUpon>Ckeditor.tt</DependentUpon>
+      <DependentUpon>ckfinder.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -229,6 +249,16 @@
       <DependentUpon>Ckeditor.edmx</DependentUpon>
       <LastGenOutput>Ckeditor.cs</LastGenOutput>
     </Content>
+    <Content Include="Models\ckfinder.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ckfinder.edmx</DependentUpon>
+      <LastGenOutput>ckfinder.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\ckfinder.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ckfinder.edmx</DependentUpon>
+      <LastGenOutput>ckfinder.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\ckeditor\adapters\jquery.js" />
@@ -242,6 +272,13 @@
     </EntityDeploy>
     <Content Include="Models\Ckeditor.edmx.diagram">
       <DependentUpon>Ckeditor.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\ckfinder.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ckfinder.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\ckfinder.edmx.diagram">
+      <DependentUpon>ckfinder.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\ckeditor\ckeditor.php" />
@@ -657,6 +694,16 @@
     <Content Include="Views\TinTuc\Details.cshtml" />
     <Content Include="Views\TinTuc\Edit.cshtml" />
     <Content Include="Views\TinTuc\Index.cshtml" />
+    <Content Include="Views\RoLe\Create.cshtml" />
+    <Content Include="Views\RoLe\Delete.cshtml" />
+    <Content Include="Views\RoLe\Details.cshtml" />
+    <Content Include="Views\RoLe\Edit.cshtml" />
+    <Content Include="Views\RoLe\Index.cshtml" />
+    <Content Include="Views\demoes\Create.cshtml" />
+    <Content Include="Views\demoes\Delete.cshtml" />
+    <Content Include="Views\demoes\Details.cshtml" />
+    <Content Include="Views\demoes\Edit.cshtml" />
+    <Content Include="Views\demoes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

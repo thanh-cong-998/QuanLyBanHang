@@ -30,6 +30,7 @@
             @Html.LabelFor(model => model.NoiDung, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.TextAreaFor(model => model.NoiDung, new { @class = "ckeditor" })
+                @Html.EditorFor(model => model.NoiDung, new { @class = "ckfinder" })
                 @Html.ValidationMessageFor(model => model.NoiDung, "", new { @class = "text-danger" })
             </div>
         </div>

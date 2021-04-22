@@ -19,5 +19,6 @@ namespace QuanLyBanHang.Models
         //định nghĩa datatype
         [DataType(DataType.Password)]
         public string Password { get; set; }
+        public string RoleID { get; set; }
     }
 }
