@@ -10,6 +10,7 @@ namespace QuanLyBanHang.Controllers
 {
     public class AccountController : Controller
     {
+        [Authorize(Roles ="admin")]
         //Action Login(HttpGet), mặc định là get
         public ViewResult Login(string returnUrl)
         {

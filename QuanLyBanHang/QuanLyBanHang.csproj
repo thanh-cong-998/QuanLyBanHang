@@ -228,6 +228,7 @@
     <Compile Include="Models\TinTucs.cs">
       <DependentUpon>ckfinder.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\UserRoleProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
