@@ -182,6 +182,10 @@
     <Compile Include="Migrations\202104131321068_create_database1.Designer.cs">
       <DependentUpon>202104131321068_create_database1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104230209355_create_table_Role.cs" />
+    <Compile Include="Migrations\202104230209355_create_table_Role.Designer.cs">
+      <DependentUpon>202104230209355_create_table_Role.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\ChiTietDonHang.cs" />
@@ -728,6 +732,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104131321068_create_database1.resx">
       <DependentUpon>202104131321068_create_database1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104230209355_create_table_Role.resx">
+      <DependentUpon>202104230209355_create_table_Role.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
