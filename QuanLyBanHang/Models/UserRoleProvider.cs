@@ -38,7 +38,7 @@ namespace QuanLyBanHang.Models
 
         public override string[] GetRolesForUser(string username)
         {
-            using (QuanLyBanHangdbContext db = new QuanLyBanHangdbContext())
+            using (var db = new QuanLyBanHangdbContext())
             {
                 var userRoles = (from acc in db.Accounts
                                  join rol in db.RoLes
