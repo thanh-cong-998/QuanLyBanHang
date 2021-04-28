@@ -8,9 +8,10 @@ using System.Web.Security;
 
 namespace QuanLyBanHang.Controllers
 {
+    [Authorize(Roles = "admin")]
     public class AccountController : Controller
     {
-        [Authorize(Roles ="admin")]
+        [AllowAnonymous]
         //Action Login(HttpGet), mặc định là get
         public ViewResult Login(string returnUrl)
         {

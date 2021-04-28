@@ -19,7 +19,9 @@ namespace QuanLyBanHang.Models
         public virtual DbSet<PhieuDonHang> PhieuDonHangs { get; set; }
         public virtual DbSet<ThanhTien> ThanhTiens { get; set; }
         public virtual DbSet<KhoHang> KhoHangs { get; set; }
-        public virtual DbSet<TinTuc> TinTucs { get; set; }
+        public virtual DbSet<Article> Articles { get; set; }
+      
+        public virtual DbSet<RoLe> RoLes { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<KhachHang>()
@@ -33,10 +35,14 @@ namespace QuanLyBanHang.Models
             modelBuilder.Entity<HoaDon>()
                 .Property(e => e.MaHoaDon)
                 .IsFixedLength();
+
+            modelBuilder.Entity<Article>()
+               .Property(e => e.ArticleID)
+               .IsUnicode(false);
+
         }
 
         public System.Data.Entity.DbSet<QuanLyBanHang.Models.Account> Accounts { get; set; }
 
-        public System.Data.Entity.DbSet<QuanLyBanHang.Models.RoLe> RoLes { get; set; }
     }
 }

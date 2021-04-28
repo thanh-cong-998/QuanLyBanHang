@@ -6,7 +6,7 @@ using System.Web;
 
 namespace QuanLyBanHang.Models
 {
-    public class RoLe
+    public class RoLe 
     {
         [Key]
         public string RoleID { get; set; }

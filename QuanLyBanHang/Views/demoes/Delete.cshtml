@@ -12,6 +12,14 @@
     <h4>demo</h4>
     <hr />
     <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DemoName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DemoName)
+        </dd>
+
     </dl>
 
     @using (Html.BeginForm()) {
