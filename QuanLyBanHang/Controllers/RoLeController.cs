@@ -10,6 +10,7 @@ using QuanLyBanHang.Models;
 
 namespace QuanLyBanHang.Controllers
 {
+    [Authorize(Roles = "NTC")]
     public class RoLeController : Controller
     {
         private QuanLyBanHangdbContext db = new QuanLyBanHangdbContext();

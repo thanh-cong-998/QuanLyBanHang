@@ -5,12 +5,13 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
+using QuanLyBanHang.Models;
 
 namespace QuanLyBanHang.Controllers
 {
-    [Authorize(Roles = "admin")]
     public class AccountController : Controller
     {
+        QuanLyBanHangdbContext db = new QuanLyBanHangdbContext();
         [AllowAnonymous]
         //Action Login(HttpGet), mặc định là get
         public ViewResult Login(string returnUrl)
@@ -27,8 +28,9 @@ namespace QuanLyBanHang.Controllers
             // Nếu vượt qua được validation ở accounmodel
             if (ModelState.IsValid)
             {
+                var model = db.Accounts.Where(m => m.Username == acc.Username && m.Password == acc.Password).ToList().Count();
                 //kiểm tra thông tin đăng nhập
-                if (acc.Username == "admin" && acc.Password == "123123")
+                if (model == 1)
                 {
                     //set cookie
                     FormsAuthentication.SetAuthCookie(acc.Username, true);
