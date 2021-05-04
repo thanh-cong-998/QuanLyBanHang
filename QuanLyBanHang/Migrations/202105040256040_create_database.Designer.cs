@@ -7,13 +7,13 @@ namespace QuanLyBanHang.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class Create_Database : IMigrationMetadata
+    public sealed partial class create_database : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Create_Database));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(create_database));
         
         string IMigrationMetadata.Id
         {
-            get { return "202104280153168_Create_Database"; }
+            get { return "202105040256040_create_database"; }
         }
         
         string IMigrationMetadata.Source

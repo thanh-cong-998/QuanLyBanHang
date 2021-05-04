@@ -3,7 +3,7 @@ namespace QuanLyBanHang.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Create_Database : DbMigration
+    public partial class create_database : DbMigration
     {
         public override void Up()
         {

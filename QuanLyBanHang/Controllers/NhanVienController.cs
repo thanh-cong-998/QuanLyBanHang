@@ -7,6 +7,8 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using QuanLyBanHang.Models;
+using System.Data.SqlClient;
+using System.Configuration;
 
 namespace QuanLyBanHang.Controllers
 {

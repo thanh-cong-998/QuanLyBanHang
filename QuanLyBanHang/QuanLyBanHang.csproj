@@ -69,6 +69,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Excel, Version=2.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Excel.1.0.0\lib\dotnet\Excel.dll</HintPath>
+    </Reference>
     <Reference Include="ImageProcessor, Version=2.8.0.152, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ImageProcessor.2.8.0\lib\net452\ImageProcessor.dll</HintPath>
     </Reference>
@@ -177,25 +180,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202104131048120_create-database.cs" />
-    <Compile Include="Migrations\202104131048120_create-database.designer.cs">
-      <DependentUpon>202104131048120_create-database.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104131321068_create_database1.cs" />
-    <Compile Include="Migrations\202104131321068_create_database1.Designer.cs">
-      <DependentUpon>202104131321068_create_database1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104230209355_create_table_Role.cs" />
-    <Compile Include="Migrations\202104230209355_create_table_Role.Designer.cs">
-      <DependentUpon>202104230209355_create_table_Role.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104280153168_Create_Database.cs" />
-    <Compile Include="Migrations\202104280153168_Create_Database.Designer.cs">
-      <DependentUpon>202104280153168_Create_Database.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104280309281_Create_Table_Article.cs" />
-    <Compile Include="Migrations\202104280309281_Create_Table_Article.Designer.cs">
-      <DependentUpon>202104280309281_Create_Table_Article.cs</DependentUpon>
+    <Compile Include="Migrations\202105040256040_create_database.cs" />
+    <Compile Include="Migrations\202105040256040_create_database.Designer.cs">
+      <DependentUpon>202105040256040_create_database.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account.cs" />
@@ -1432,24 +1419,12 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202104131048120_create-database.resx">
-      <DependentUpon>202104131048120_create-database.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104131321068_create_database1.resx">
-      <DependentUpon>202104131321068_create_database1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104230209355_create_table_Role.resx">
-      <DependentUpon>202104230209355_create_table_Role.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104280153168_Create_Database.resx">
-      <DependentUpon>202104280153168_Create_Database.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104280309281_Create_Table_Article.resx">
-      <DependentUpon>202104280309281_Create_Table_Article.cs</DependentUpon>
-    </EmbeddedResource>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <EmbeddedResource Include="Migrations\202105040256040_create_database.resx">
+      <DependentUpon>202105040256040_create_database.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

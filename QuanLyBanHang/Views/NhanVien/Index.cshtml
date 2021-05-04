@@ -24,23 +24,30 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.TenNhanVien)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.GioiTinh)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SĐT)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.MaNhanVien }) |
-            @Html.ActionLink("Details", "Details", new { id=item.MaNhanVien }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.MaNhanVien })
-        </td>
-    </tr>
-}
-
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenNhanVien)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GioiTinh)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SĐT)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.MaNhanVien }) |
+                @Html.ActionLink("Details", "Details", new { id = item.MaNhanVien }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.MaNhanVien })
+            </td>
+        </tr>
+    }
 </table>
+@using (Html.BeginForm("Import", "NhanVien", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div>
+        @Html.TextBox("file", "", new { type = "file" }) <br />
+        <input type="submit" value="Upload" />
+    </div>
+}
