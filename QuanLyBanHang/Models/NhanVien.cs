@@ -13,7 +13,7 @@ namespace QuanLyBanHang.Models
         public string MaNhanVien { get; set; }
         public string TenNhanVien { get; set; }
         public string GioiTinh { get; set; }
-        public int SĐT { get; set; }
+        public string SĐT { get; set; }
         public ICollection<HoaDon> HoaDons { get; set; }
     }
 }

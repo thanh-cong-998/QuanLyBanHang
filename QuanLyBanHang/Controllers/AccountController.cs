@@ -12,7 +12,7 @@ namespace QuanLyBanHang.Controllers
     public class AccountController : Controller
     {
         QuanLyBanHangdbContext db = new QuanLyBanHangdbContext();
-        [AllowAnonymous]
+        //[AllowAnonymous]
         //Action Login(HttpGet), mặc định là get
         public ViewResult Login(string returnUrl)
         {
@@ -21,7 +21,7 @@ namespace QuanLyBanHang.Controllers
         }
         //nhận dữ liệu từ client gửi lên
         [HttpPost]
-        [AllowAnonymous]
+        //[AllowAnonymous]
         [ValidateAntiForgeryToken]
         public ActionResult Login(Account acc, string returnUrl)
         {

@@ -14,7 +14,6 @@ namespace QuanLyBanHang.Controllers
     public class RoLeController : Controller
     {
         private QuanLyBanHangdbContext db = new QuanLyBanHangdbContext();
-
         // GET: RoLe
         public ActionResult Index()
         {
