@@ -11,11 +11,13 @@ namespace QuanLyBanHang.Models
         [Key]
         [StringLength(10)]
         public string Ma_PDH { get; set; }
-        public string ThanhTienID { get; set; }
+        [StringLength(10)]
+        public string MaHoaDon { get; set; }
         public DateTime NgayDatHang { get; set; }
-        public int SĐT { get; set; }
+        public string SĐT { get; set; }
         public string DiaChi { get; set; }
-        public virtual ThanhTien ThanhTien { get; set; }
+        public virtual ICollection<ThanhTien> ThanhTiens { get; set; }
         public virtual ICollection<ChiTietDonHang> ChiTietDonHangs { get; set; }
+        public virtual HoaDon HoaDon { get; set; }
     }
 }

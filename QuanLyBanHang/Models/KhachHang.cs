@@ -12,9 +12,8 @@ namespace QuanLyBanHang.Models
         [StringLength(10)]
         public string MaKhachHang { get; set; }
         public string HoVaTen { get; set; }
-        public string MaHoaDon { get; set; }
-        public int DiaChi { get; set; }
-        public int SĐT { get; set; }
+        public string DiaChi { get; set; }
+        public string SĐT { get; set; }
         public ICollection<HoaDon> HoaDons  { get; set; }
     }
 }

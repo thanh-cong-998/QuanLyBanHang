@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
-using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -47,7 +46,7 @@ namespace QuanLyBanHang.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "MaKhachHang,HoVaTen,MaHoaDon,DiaChi,SĐT")] KhachHang khachHang)
+        public ActionResult Create([Bind(Include = "MaKhachHang,HoVaTen,DiaChi,SĐT")] KhachHang khachHang)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +78,7 @@ namespace QuanLyBanHang.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "MaKhachHang,HoVaTen,MaHoaDon,DiaChi,SĐT")] KhachHang khachHang)
+        public ActionResult Edit([Bind(Include = "MaKhachHang,HoVaTen,DiaChi,SĐT")] KhachHang khachHang)
         {
             if (ModelState.IsValid)
             {

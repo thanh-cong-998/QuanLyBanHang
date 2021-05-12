@@ -180,13 +180,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202105040256040_create_database.cs" />
-    <Compile Include="Migrations\202105040256040_create_database.Designer.cs">
-      <DependentUpon>202105040256040_create_database.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105050125564_alter_table_NhanVien_SDT.cs" />
-    <Compile Include="Migrations\202105050125564_alter_table_NhanVien_SDT.Designer.cs">
-      <DependentUpon>202105050125564_alter_table_NhanVien_SDT.cs</DependentUpon>
+    <Compile Include="Migrations\202105120436094_create_database.cs" />
+    <Compile Include="Migrations\202105120436094_create_database.Designer.cs">
+      <DependentUpon>202105120436094_create_database.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account.cs" />
@@ -1428,11 +1424,8 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202105040256040_create_database.resx">
-      <DependentUpon>202105040256040_create_database.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105050125564_alter_table_NhanVien_SDT.resx">
-      <DependentUpon>202105050125564_alter_table_NhanVien_SDT.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105120436094_create_database.resx">
+      <DependentUpon>202105120436094_create_database.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

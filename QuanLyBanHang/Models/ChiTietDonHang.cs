@@ -14,7 +14,7 @@ namespace QuanLyBanHang.Models
         public string Ma_PDH { get; set; }
         public string TenMatHang { get; set; }
         public int SoLuong { get; set; }
-        public int TongTien { get; set; }
+        public string TongTien { get; set; }
         public DateTime NgayMuaHang { get; set; }
         public virtual PhieuDonHang PhieuDonHang { get; set; }
     }

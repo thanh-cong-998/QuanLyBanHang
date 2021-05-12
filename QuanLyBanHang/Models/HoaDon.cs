@@ -16,11 +16,11 @@ namespace QuanLyBanHang.Models
         [StringLength(10)]
         public string MaNhanVien { get; set; }
         public int SoLuong { get; set; }
-        public int DonGia { get; set; }
+        public string DonGia { get; set; }
         public string MaMatHang { get; set; }
         public virtual MatHang MatHang { get; set; }
         public virtual NhanVien NhanVien { get; set; }
         public virtual KhachHang KhachHang { get; set; }
-        public virtual ICollection<ThanhTien> ThanhTiens { get; set; }
+        public virtual ICollection<PhieuDonHang> PhieuDonHangs { get; set; }
     }
 }

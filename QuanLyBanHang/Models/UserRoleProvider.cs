@@ -44,7 +44,7 @@ namespace QuanLyBanHang.Models
                                  join rol in db.RoLes
                                  on acc.RoleID equals rol.RoleID
                                  where acc.Username == username
-                                 select rol.RoleName).ToArray();
+                                 select rol.HoVaTen).ToArray();
                 return userRoles;
             }
         }

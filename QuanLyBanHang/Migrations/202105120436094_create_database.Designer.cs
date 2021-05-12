@@ -13,7 +13,7 @@ namespace QuanLyBanHang.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202105040256040_create_database"; }
+            get { return "202105120436094_create_database"; }
         }
         
         string IMigrationMetadata.Source

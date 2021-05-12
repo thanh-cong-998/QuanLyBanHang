@@ -14,8 +14,8 @@ namespace QuanLyBanHang.Models
         public string TenMatHang { get; set; }
         public string LoaiMatHang { get; set; }
         public string HangSX { get; set; }
-        public DateTime NgaySX { get; set; }
-        public int GiaBan { get; set; }
+        public string NgaySX { get; set; }
+        public string GiaBan { get; set; }
         public virtual ICollection<HoaDon> hoaDons { get; set; }
         public virtual ICollection<KhoHang> KhoHangs { get; set; }
     }

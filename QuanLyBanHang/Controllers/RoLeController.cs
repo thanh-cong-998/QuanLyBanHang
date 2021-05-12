@@ -14,6 +14,7 @@ namespace QuanLyBanHang.Controllers
     public class RoLeController : Controller
     {
         private QuanLyBanHangdbContext db = new QuanLyBanHangdbContext();
+
         // GET: RoLe
         public ActionResult Index()
         {
@@ -46,7 +47,7 @@ namespace QuanLyBanHang.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "RoleID,RoleName")] RoLe roLe)
+        public ActionResult Create([Bind(Include = "RoleID,HoVaTen,SoNgayLam")] RoLe roLe)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +79,7 @@ namespace QuanLyBanHang.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "RoleID,RoleName")] RoLe roLe)
+        public ActionResult Edit([Bind(Include = "RoleID,HoVaTen,SoNgayLam")] RoLe roLe)
         {
             if (ModelState.IsValid)
             {

@@ -11,7 +11,7 @@ namespace QuanLyBanHang.Models
         [Key]
         [StringLength(10)]
         public string MaKhoHang { get; set; }
-        public DateTime NgayNhapKho { get; set; }
+        public string NgayNhapKho { get; set; }
         public string MaMatHang { get; set; }
         public int SoLuongTonKho { get; set; }
         public string NhaCC { get; set; }

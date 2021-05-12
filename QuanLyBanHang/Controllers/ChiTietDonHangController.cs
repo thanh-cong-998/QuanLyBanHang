@@ -39,7 +39,7 @@ namespace QuanLyBanHang.Controllers
         // GET: ChiTietDonHang/Create
         public ActionResult Create()
         {
-            ViewBag.Ma_PDH = new SelectList(db.PhieuDonHangs, "Ma_PDH", "ThanhTienID");
+            ViewBag.Ma_PDH = new SelectList(db.PhieuDonHangs, "Ma_PDH", "MaHoaDon");
             return View();
         }
 
@@ -57,7 +57,7 @@ namespace QuanLyBanHang.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.Ma_PDH = new SelectList(db.PhieuDonHangs, "Ma_PDH", "ThanhTienID", chiTietDonHang.Ma_PDH);
+            ViewBag.Ma_PDH = new SelectList(db.PhieuDonHangs, "Ma_PDH", "MaHoaDon", chiTietDonHang.Ma_PDH);
             return View(chiTietDonHang);
         }
 
@@ -73,7 +73,7 @@ namespace QuanLyBanHang.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.Ma_PDH = new SelectList(db.PhieuDonHangs, "Ma_PDH", "ThanhTienID", chiTietDonHang.Ma_PDH);
+            ViewBag.Ma_PDH = new SelectList(db.PhieuDonHangs, "Ma_PDH", "MaHoaDon", chiTietDonHang.Ma_PDH);
             return View(chiTietDonHang);
         }
 
@@ -90,7 +90,7 @@ namespace QuanLyBanHang.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.Ma_PDH = new SelectList(db.PhieuDonHangs, "Ma_PDH", "ThanhTienID", chiTietDonHang.Ma_PDH);
+            ViewBag.Ma_PDH = new SelectList(db.PhieuDonHangs, "Ma_PDH", "MaHoaDon", chiTietDonHang.Ma_PDH);
             return View(chiTietDonHang);
         }
 

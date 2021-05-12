@@ -10,6 +10,7 @@ namespace QuanLyBanHang.Models
     {
         [Key]
         public string RoleID { get; set; }
-        public string RoleName { get; set; }
+        public string HoVaTen { get; set; }
+        public string SoNgayLam { get; set; }
     }
 }

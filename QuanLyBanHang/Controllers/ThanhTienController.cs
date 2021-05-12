@@ -17,7 +17,7 @@ namespace QuanLyBanHang.Controllers
         // GET: ThanhTien
         public ActionResult Index()
         {
-            var thanhTiens = db.ThanhTiens.Include(t => t.HoaDon);
+            var thanhTiens = db.ThanhTiens.Include(t => t.PhieuDonHang);
             return View(thanhTiens.ToList());
         }
 
@@ -39,7 +39,7 @@ namespace QuanLyBanHang.Controllers
         // GET: ThanhTien/Create
         public ActionResult Create()
         {
-            ViewBag.MaHoaDon = new SelectList(db.HoaDons, "MaHoaDon", "MaKhachHang");
+            ViewBag.Ma_PDH = new SelectList(db.PhieuDonHangs, "Ma_PDH", "DiaChi");
             return View();
         }
 
@@ -48,7 +48,7 @@ namespace QuanLyBanHang.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ThanhTienID,MaHoaDon,NgayBan,SoLuong,DonGia,TongTien")] ThanhTien thanhTien)
+        public ActionResult Create([Bind(Include = "ThanhTienID,Ma_PDH,NgayBan,SoLuong,DonGia,TongTien")] ThanhTien thanhTien)
         {
             if (ModelState.IsValid)
             {
@@ -57,7 +57,7 @@ namespace QuanLyBanHang.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.MaHoaDon = new SelectList(db.HoaDons, "MaHoaDon", "MaKhachHang", thanhTien.MaHoaDon);
+            ViewBag.Ma_PDH = new SelectList(db.PhieuDonHangs, "Ma_PDH", "DiaChi", thanhTien.Ma_PDH);
             return View(thanhTien);
         }
 
@@ -73,7 +73,7 @@ namespace QuanLyBanHang.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.MaHoaDon = new SelectList(db.HoaDons, "MaHoaDon", "MaKhachHang", thanhTien.MaHoaDon);
+            ViewBag.Ma_PDH = new SelectList(db.PhieuDonHangs, "Ma_PDH", "DiaChi", thanhTien.Ma_PDH);
             return View(thanhTien);
         }
 
@@ -82,7 +82,7 @@ namespace QuanLyBanHang.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ThanhTienID,MaHoaDon,NgayBan,SoLuong,DonGia,TongTien")] ThanhTien thanhTien)
+        public ActionResult Edit([Bind(Include = "ThanhTienID,Ma_PDH,NgayBan,SoLuong,DonGia,TongTien")] ThanhTien thanhTien)
         {
             if (ModelState.IsValid)
             {
@@ -90,7 +90,7 @@ namespace QuanLyBanHang.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.MaHoaDon = new SelectList(db.HoaDons, "MaHoaDon", "MaKhachHang", thanhTien.MaHoaDon);
+            ViewBag.Ma_PDH = new SelectList(db.PhieuDonHangs, "Ma_PDH", "DiaChi", thanhTien.Ma_PDH);
             return View(thanhTien);
         }
 

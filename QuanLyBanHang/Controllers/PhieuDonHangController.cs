@@ -17,7 +17,7 @@ namespace QuanLyBanHang.Controllers
         // GET: PhieuDonHang
         public ActionResult Index()
         {
-            var phieuDonHangs = db.PhieuDonHangs.Include(p => p.ThanhTien);
+            var phieuDonHangs = db.PhieuDonHangs.Include(p => p.HoaDon);
             return View(phieuDonHangs.ToList());
         }
 
@@ -39,7 +39,7 @@ namespace QuanLyBanHang.Controllers
         // GET: PhieuDonHang/Create
         public ActionResult Create()
         {
-            ViewBag.ThanhTienID = new SelectList(db.ThanhTiens, "ThanhTienID", "MaHoaDon");
+            ViewBag.MaHoaDon = new SelectList(db.HoaDons, "MaHoaDon", "MaKhachHang");
             return View();
         }
 
@@ -48,7 +48,7 @@ namespace QuanLyBanHang.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Ma_PDH,ThanhTienID,NgayDatHang,SĐT,DiaChi")] PhieuDonHang phieuDonHang)
+        public ActionResult Create([Bind(Include = "Ma_PDH,MaHoaDon,NgayDatHang,SĐT,DiaChi")] PhieuDonHang phieuDonHang)
         {
             if (ModelState.IsValid)
             {
@@ -57,7 +57,7 @@ namespace QuanLyBanHang.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.ThanhTienID = new SelectList(db.ThanhTiens, "ThanhTienID", "MaHoaDon", phieuDonHang.ThanhTienID);
+            ViewBag.MaHoaDon = new SelectList(db.HoaDons, "MaHoaDon", "MaKhachHang", phieuDonHang.MaHoaDon);
             return View(phieuDonHang);
         }
 
@@ -73,7 +73,7 @@ namespace QuanLyBanHang.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.ThanhTienID = new SelectList(db.ThanhTiens, "ThanhTienID", "MaHoaDon", phieuDonHang.ThanhTienID);
+            ViewBag.MaHoaDon = new SelectList(db.HoaDons, "MaHoaDon", "MaKhachHang", phieuDonHang.MaHoaDon);
             return View(phieuDonHang);
         }
 
@@ -82,7 +82,7 @@ namespace QuanLyBanHang.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Ma_PDH,ThanhTienID,NgayDatHang,SĐT,DiaChi")] PhieuDonHang phieuDonHang)
+        public ActionResult Edit([Bind(Include = "Ma_PDH,MaHoaDon,NgayDatHang,SĐT,DiaChi")] PhieuDonHang phieuDonHang)
         {
             if (ModelState.IsValid)
             {
@@ -90,7 +90,7 @@ namespace QuanLyBanHang.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.ThanhTienID = new SelectList(db.ThanhTiens, "ThanhTienID", "MaHoaDon", phieuDonHang.ThanhTienID);
+            ViewBag.MaHoaDon = new SelectList(db.HoaDons, "MaHoaDon", "MaKhachHang", phieuDonHang.MaHoaDon);
             return View(phieuDonHang);
         }
 

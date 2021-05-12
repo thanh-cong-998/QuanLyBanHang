@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Danh sách khách hàng</h2>
+<h2>Index</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -14,9 +14,6 @@
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.HoVaTen)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MaHoaDon)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.DiaChi)
@@ -31,9 +28,6 @@
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.HoVaTen)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MaHoaDon)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.DiaChi)
